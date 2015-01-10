@@ -1,0 +1,9 @@
+#!/bin/bash
+rm -rf  ~/Desktop/MERGED
+g++ ~/MERGFILE/mrg.cpp -o out.out
+./out.out
+mkdir ~/Desktop/MERGED
+
+mv ~/Desktop/PARTS/merged.txt ~/Desktop/MERGED
+rm out.out
+
