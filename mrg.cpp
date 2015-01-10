@@ -55,18 +55,24 @@ cout<<'\n';
 int c;
 std::string name ; 
 std::string name1;
-std::cout<<BOLDYELLOW<<"What is path of directory which contain files to merg ? "<<RESET<<std::endl;
+std::cout<<BOLDYELLOW<<"        What is path of directory which contain files to merg ? "<<RESET<<std::endl;
 cin>>name;  
+std::cout<<BOLDCYAN <<"******************************"<<RESET;std::cout<<BOLDRED<<"**********************"<<RESET;sleep(1);std::cout<<BOLDYELLOW<<"******************"<<RESET;std::cout<<BOLDWHITE<<"*********************"<<RESET<<endl;
+cout<<'\n';
 glob_t gl;
 size_t num = 0;
 if(glob(name.c_str(), GLOB_NOSORT, NULL, &gl) == 0)
   num = gl.gl_pathc;
 globfree(&gl);
-cout << "Number of files: " << num << endl;
-
+cout <<BOLDYELLOW<< "        Counting file is successful! The number of files contained in that directory= "RESET << num << endl;
+cout<<'\n';
+std::cout<<BOLDCYAN <<"******************************"<<RESET;std::cout<<BOLDRED<<"**********************"<<RESET;sleep(1);std::cout<<BOLDYELLOW<<"******************"<<RESET;std::cout<<BOLDWHITE<<"*********************"<<RESET<<endl;
+cout<<'\n';
 c=num;
-std::cout<<BOLDYELLOW<<"What is the path of directory ?"<<RESET<<std::endl;
+std::cout<<BOLDYELLOW<<"               What is the path of directory ?"<<RESET<<std::endl;
 cin>>name1;
+    std::cout<<BOLDCYAN <<"******************************"<<RESET;std::cout<<BOLDRED<<"**********************"<<RESET;sleep(1);std::cout<<BOLDYELLOW<<"******************"<<RESET;std::cout<<BOLDWHITE<<"*********************"<<RESET<<endl;
+cout<<'\n';
 chdir(name1.c_str());
 
     ofstream out("merged.txt");
@@ -82,7 +88,9 @@ chdir(name1.c_str());
         while (getline(infile, line)) {
             out << line<<endl;
         }
-    }
+     }
+     std::cout<<BOLDGREEN<<"    Congratulations ! file merging is successiful. Please find your merged file (merged.txt) in: ~/Desktop/MERGED  "<<RESET<<std::endl;
+     cout<<'\n';
     return 0;
 }
 
