@@ -55,7 +55,7 @@ cout<<'\n';
 int c;
 std::string name ; 
 std::string name1;
-std::cout<<BOLDYELLOW<<"        What is path of directory which contain files to merg ? "<<RESET<<std::endl;
+std::cout<<BOLDYELLOW<<"        What is the path of  Directory/*.extension  to merg ? "<<RESET<<std::endl;
 cin>>name;  
 std::cout<<BOLDCYAN <<"******************************"<<RESET;std::cout<<BOLDRED<<"**********************"<<RESET;sleep(1);std::cout<<BOLDYELLOW<<"******************"<<RESET;std::cout<<BOLDWHITE<<"*********************"<<RESET<<endl;
 cout<<'\n';
