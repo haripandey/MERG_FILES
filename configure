@@ -1,0 +1,11 @@
+#!/bin/bash
+rm -rf MERGFILE
+rm -rf ~/MERGFILE
+mkdir MERGFILE
+mkdir MERGFILE/bin
+cp ./mrg.cpp MERGFILE
+cp ./mergfile MERGFILE/bin
+cp -r ./MERGFILE ~/MERGFILE
+cat paarth_pandey>>~/.bashrc
+source ~/.bashrc
+
